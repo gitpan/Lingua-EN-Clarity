@@ -1,0 +1,63 @@
+=head1 Lingua::EN::Clarity
+
+This module was created to calculate the readability of English text,
+with an emphasis on clarity.
+
+=head2 SYNOPSIS
+
+    use Lingua::EN::Clarity;
+
+    my $text = Lingua::EN::Clarity->new;
+
+    $text->read( "Our knowledge has made us cynical; our cleverness, hard 
+                  and unkind. We think too much and feel too little. More 
+                  than machinery, we need humanity. More than cleverness, 
+                  we need kindness and gentleness." );
+
+    my $sentences   = $text->sentences;
+    my $words       = $text->words;
+    my $syllables   = $text->syllables;
+    my $grade_level = $text->flesch_kincaid;
+
+=head2 INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+=head2 DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+=over 4
+
+=item
+
+Lingua::EN::Sentence
+
+=item 
+
+Lingua::EN::Syllable
+
+=item
+
+Math::Round
+
+=item 
+
+Test::More
+
+=back
+
+=head2 COPYRIGHT AND LICENCE
+
+Copyright (C) 2012 by Brandon Singer
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.14.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+=cut

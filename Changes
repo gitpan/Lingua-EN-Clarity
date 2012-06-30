@@ -1,0 +1,6 @@
+Revision history for Perl extension Lingua::EN::Clarity.
+
+0.01  Sun Jun 17 19:28:46 2012
+	- original version; created by h2xs 1.23 with options
+		-X Lingua::EN::Clarity
+

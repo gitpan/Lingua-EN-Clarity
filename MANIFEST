@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+README.pod
+t/00-load.t
+t/01-attributes.t
+t/02-methods.t
+lib/Lingua/EN/Clarity.pm
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
