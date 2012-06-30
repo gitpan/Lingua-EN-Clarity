@@ -23,6 +23,6 @@ $test->read( $text );
 is( $test->sentences, 8, "Sentence count" );
 is( $test->words, 99, "Word count" );
 is( $test->syllables, 124, "Syllable count" );
-is( $test->flesch_kincaid, 4, "Flesch-Kincaid" );
+ok( $test->flesch_kincaid > 4 && $test->flesch_kincaid < 5, "Flesch-Kincaid" );
 
 done_testing;

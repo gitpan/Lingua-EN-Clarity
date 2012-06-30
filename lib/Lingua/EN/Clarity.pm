@@ -2,10 +2,9 @@ package Lingua::EN::Clarity;
 
 use Lingua::EN::Sentence qw( get_sentences add_acronyms );
 use Lingua::EN::Syllable qw( syllable );
-use Math::Round qw( round );
 use Moose;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has 'words'     => ( isa => 'Int', is => 'rw', default => 0 );
 has 'sentences' => ( isa => 'Int', is => 'rw', default => 0 );
@@ -39,14 +38,12 @@ sub flesch_kincaid {
                 15.59;
 
     if ( $grade < 1 ) {
-        $grade = 1;
+        return 1;
     } elsif ( $grade > 12 ) {
-        $grade = 12;
+        return 12;
     } else {
-        $grade = round( $grade ); 
+        return $grade;
     }
-
-    return $grade;
 }
 
 no Moose;
